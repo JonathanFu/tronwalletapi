@@ -36,29 +36,29 @@ Resources:
           Properties:
             Path: /accounts
             Method: get
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /tokenBalances
-            Method: get
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /allBlocks
-            Method: get
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /nodes
-            Method: get
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /witnesses
-            Method: get
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /tokens
-            Method: get
+#        GetEvent:
+#          Type: Api
+#          Properties:
+#            Path: /tokenBalances
+#            Method: get
+#        GetEvent:
+#          Type: Api
+#          Properties:
+#            Path: /allBlocks
+#            Method: get
+#        GetEvent:
+#          Type: Api
+#          Properties:
+#            Path: /nodes
+#            Method: get
+#        GetEvent:
+#          Type: Api
+#          Properties:
+#            Path: /witnesses
+#            Method: get
+#        GetEvent:
+#          Type: Api
+#          Properties:
+#            Path: /tokens
+#            Method: get
 
