@@ -21,7 +21,7 @@ exports.loadAllBlocks = async () => {
     if ((block.number - i) < 0) {
       break;
     }
-    blockRequests.push(Client.getBlockByNum(block.number - i));
+    blockRequests.push(await Client.getBlockByNum(block.number - i));
   }
 
   return blockRequests;
@@ -38,7 +38,7 @@ exports.loadBlocks = async () => {
         if ((block.number - i) < 0) {
             break;
         }
-        blockRequests.push(Client.getBlockByNum(block.number - i));
+        blockRequests.push(await Client.getBlockByNum(block.number - i));
     }
 
     return blockRequests;
