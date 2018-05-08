@@ -1,11 +1,10 @@
 const Client = require("../services/api");
 
-exports.loadWitnesses = () => async () => {
+exports.loadWitnesses = async () => {
   return await Client.getWitnesses();
 };
 
-
-exports.loadNodes = () => async () => {
+exports.loadNodes = async () => {
   let nodes = await Client.getNodes();
 
   return nodes.citys;

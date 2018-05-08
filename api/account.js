@@ -11,7 +11,7 @@ exports.loadTokenBalances = async (password) => {
 };
 
 
-exports.loadAllBlocks = () => async () => {
+exports.loadAllBlocks = async () => {
 
   let block = await Client.getLatestBlock();
 
@@ -28,7 +28,7 @@ exports.loadAllBlocks = () => async () => {
 };
 
 
-exports.loadBlocks = () => async () => {
+exports.loadBlocks = async () => {
 
     let block = await Client.getLatestBlock();
 
@@ -44,7 +44,7 @@ exports.loadBlocks = () => async () => {
     return blockRequests;
 };
 
-exports.loadTotalNumberOfTransactions = () => async () => {
+exports.loadTotalNumberOfTransactions = async () => {
 
     let totalTransactions = await Client.getTotalNumberOfTransactions();
     return totalTransactions;

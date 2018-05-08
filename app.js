@@ -4,42 +4,29 @@ const Account = require('./api/account');
 const Network = require('./api/network');
 const Tokens = require('./api/tokens');
 
-app.get('/accounts', (req, res) => {
-  res.send({
-      Accounts: Account.loadAccounts()
-  });
+app.get('/accounts', async (req, res) => {
+  res.json(await Account.loadAccounts());
 });
 
-app.get('/tokenBalances', (req, res) => {
-    res.send({
-        TokenBalances: Account.loadTokenBalances('password')
-    });
+app.get('/tokenBalances', async (req, res) => {
+    res.json(await Account.loadTokenBalances(req.query.password));
 });
 
-app.get('/allBlocks', (req, res) => {
-    res.send({
-        AllBlocks: Account.loadAllBlocks()
-    });
+app.get('/allBlocks', async (req, res) => {
+    res.json(await Account.loadAllBlocks());
 });
 
-app.get('/nodes', (req, res) => {
-    res.send({
-        Nodes: Network.loadNodes()
-    });
+app.get('/nodes', async (req, res) => {
+    res.json(await Network.loadNodes());
 });
 
-app.get('/witnesses', (req, res) => {
-    res.send({
-        Witnesses: Network.loadWitnesses()
-    });
+app.get('/witnesses', async (req, res) => {
+    res.json(await Network.loadWitnesses());
 });
 
-app.get('/tokens', (req, res) => {
-    res.send({
-        Tokens: Tokens.loadTokens()
-    });
+app.get('/tokens', async (req, res) => {
+    res.json(await Tokens.loadTokens());
 });
-
 
 
 // Export your Express configuration so that it can be consumed by the Lambda handler
