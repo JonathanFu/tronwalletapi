@@ -5,11 +5,20 @@ exports.loadAccounts = async () => {
     return accounts;
 };
 
-exports.loadTokenBalances = async (password) => {
-  let balances = await Client.getAccountBalances(password);
+exports.loadAccountBalances = async (address) => {
+    let balances = await Client.getAccountBalances(address);
+    return balances;
+};
+
+exports.loadTokenBalances = async (address) => {
+  let balances = await Client.getAccountBalances(address);
   return balances;
 };
 
+exports.getLatestBlock = async () => {
+    let block = await Client.getLatestBlock();
+    return block;
+};
 
 exports.loadAllBlocks = async () => {
 
